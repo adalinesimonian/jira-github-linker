@@ -1,0 +1,35 @@
+{
+  "name": "Ticket Linker for JIRA and GitHub",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Links JIRA tickets from GitHub PRs, commits, and issues",
+  "homepage_url": "https://github.com/vsimonian/jira-github-linker",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "src/options/index.html",
+  "permissions": [
+    "storage",
+    "https://*.github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.github.com/*"
+      ],
+      "css": [
+        "src/linker/linker.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://*.github.com/*"
+      ],
+      "js": [
+        "src/linker/linker.js"
+      ]
+    }
+  ]
+}

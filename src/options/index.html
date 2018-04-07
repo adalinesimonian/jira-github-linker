@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Settings - Ticket Linker for JIRA and GitHub</title>
+    <link rel="stylesheet" href="options.css" media="screen">
+    <script type="text/javascript" src="options.js"></script>
+  </head>
+  <body>
+    <p>
+      Enter your configuration here using JSON.
+    </p>
+    <textarea id="configEditor"></textarea>
+    <button id="saveButton">Save</button>
+    <p>
+      Sample configuration:
+    </p>
+    <pre>
+      {
+        "newWindow": true,
+        "repos": [
+          {
+            "jiraHost": "https://example.atlassian.net",
+            "name": "user/repository",
+            "ticketPrefixes": [
+              "DEV",
+              "QA"
+            ]
+          }
+        ]
+      }
+    </pre>
+    <dl>
+      <dt><code>newWindow</code></dt>
+      <dd>Whether or not to open links to JIRA in a new window.</dd>
+      <dt><code>repos</code></dt>
+      <dd>The list of repositories to configure.</dd>
+      <dt><code>repos[].jiraHost</code></dt>
+      <dd>The base URL to the JIRA installation, including protocol (http, https).</dd>
+      <dt><code>repos[].name</code></dt>
+      <dd>
+        The name of the repository. If your repository lives at https://github.com/user/repository,
+        then the name is user/repository.
+      </dd>
+      <dt><code>repos[].ticketPrefixes</code></dt>
+      <dd>
+        The prefixes used for tickets in JIRA for the corresponding projects.
+        If your tickets look like DEV-12345, then your prefix for that project is DEV.
+      </dd>
+    </dl>
+  </body>
+</html>
