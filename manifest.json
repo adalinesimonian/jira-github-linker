@@ -1,6 +1,6 @@
 {
   "name": "Ticket Linker for JIRA and GitHub",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "manifest_version": 2,
   "description": "Links JIRA tickets from GitHub PRs, commits, and issues",
   "homepage_url": "https://github.com/vsimonian/jira-github-linker",
